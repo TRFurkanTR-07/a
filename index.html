@@ -217,7 +217,9 @@
         }
 
 
-        /* EVET */
+        /* =========================
+           EVET
+        ========================== */
 
         .yes {
 
@@ -238,7 +240,9 @@
         }
 
 
-        /* HAYIR */
+        /* =========================
+           HAYIR
+        ========================== */
 
         .no {
 
@@ -299,7 +303,7 @@
 
 
         /* =========================
-           CEVAP YAZISI
+           CEVAP KUTUSU
         ========================== */
 
         .message-box {
@@ -390,14 +394,84 @@
                 );
 
             font-size: 22px;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
         }
 
 
-        .next-button:hover {
+        /* =========================
+           SES BUTONU
+        ========================== */
+
+        .music-button {
+
+            position: fixed;
+
+            bottom:
+                calc(
+                    20px +
+                    env(safe-area-inset-bottom)
+                );
+
+            right: 20px;
+
+            width: 52px;
+
+            height: 52px;
+
+            min-width: 52px;
+
+            padding: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            border:
+                1px solid rgba(
+                    255,
+                    255,
+                    255,
+                    0.20
+                );
+
+            box-shadow:
+                0 8px 25px rgba(
+                    0,
+                    0,
+                    0,
+                    0.30
+                );
+
+            backdrop-filter:
+                blur(10px);
+
+            -webkit-backdrop-filter:
+                blur(10px);
+
+            font-size: 21px;
+
+            z-index: 100;
+
+            margin: 0;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+
+        .music-button:hover {
 
             transform:
                 translateY(-3px)
@@ -405,7 +479,7 @@
         }
 
 
-        .next-button:active {
+        .music-button:active {
 
             transform:
                 scale(0.92);
@@ -553,6 +627,24 @@
                     14px;
             }
 
+
+            .music-button {
+
+                width: 48px;
+
+                height: 48px;
+
+                min-width: 48px;
+
+                right: 15px;
+
+                bottom:
+                    calc(
+                        15px +
+                        env(safe-area-inset-bottom)
+                    );
+            }
+
         }
 
 
@@ -616,6 +708,24 @@
 
 
 <body>
+
+
+    <!-- =========================
+         ARKA PLAN MÜZİĞİ
+    ========================== -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="muzik.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
 
 
     <!-- =========================
@@ -747,6 +857,20 @@
 
 
     <!-- =========================
+         MÜZİK BUTONU
+    ========================== -->
+
+    <button
+        class="music-button"
+        id="musicButton"
+        onclick="toggleMusic()"
+        aria-label="Müziği aç veya kapat"
+    >
+        🔇
+    </button>
+
+
+    <!-- =========================
          JAVASCRIPT
     ========================== -->
 
@@ -834,6 +958,157 @@
         let currentQuestion = 0;
 
 
+        const music =
+            document.getElementById(
+                "backgroundMusic"
+            );
+
+
+        const musicButton =
+            document.getElementById(
+                "musicButton"
+            );
+
+
+        let musicPlaying = false;
+
+
+        /* =========================
+           MÜZİĞİ BAŞLAT
+        ========================== */
+
+        function startMusic() {
+
+            music.volume = 0.35;
+
+
+            music.play()
+                .then(() => {
+
+                    musicPlaying = true;
+
+                    musicButton.textContent =
+                        "🔊";
+
+                })
+                .catch(() => {
+
+                    /*
+                     Tarayıcı otomatik
+                     oynatmayı engellerse
+                     ilk dokunuşta başlayacak.
+                    */
+
+                    musicPlaying = false;
+
+                    musicButton.textContent =
+                        "🔇";
+
+                });
+
+        }
+
+
+        /* =========================
+           MÜZİK AÇ / KAPAT
+        ========================== */
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.volume = 0.35;
+
+                music.play()
+                    .then(() => {
+
+                        musicPlaying = true;
+
+                        musicButton.textContent =
+                            "🔊";
+
+                    })
+                    .catch(() => {
+
+                        musicPlaying = false;
+
+                        musicButton.textContent =
+                            "🔇";
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                musicPlaying = false;
+
+                musicButton.textContent =
+                    "🔇";
+
+            }
+
+        }
+
+
+        /* =========================
+           İLK DOKUNUŞTA MÜZİĞİ BAŞLAT
+        ========================== */
+
+        function firstInteraction() {
+
+            if (!musicPlaying) {
+
+                startMusic();
+
+            }
+
+            document.removeEventListener(
+                "touchstart",
+                firstInteraction
+            );
+
+            document.removeEventListener(
+                "click",
+                firstInteraction
+            );
+
+        }
+
+
+        document.addEventListener(
+            "touchstart",
+            firstInteraction,
+            {
+                once: true
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            firstInteraction,
+            {
+                once: true
+            }
+        );
+
+
+        /*
+         Sayfa açılır açılmaz
+         müziği başlatmayı dene.
+        */
+
+        window.addEventListener(
+            "load",
+            () => {
+
+                startMusic();
+
+            }
+        );
+
+
         /* =========================
            CEVAP SEÇİMİ
         ========================== */
@@ -858,37 +1133,19 @@
                 );
 
 
-            /*
-             Seçilen cevabın
-             mesajını göster
-            */
-
             message.textContent =
                 questions[
                     currentQuestion
                 ].answers[choice];
 
 
-            /*
-             Şıkları gizle
-            */
-
             buttons.style.display =
                 "none";
 
 
-            /*
-             Cevap alanını göster
-            */
-
             result.style.display =
                 "block";
 
-
-            /*
-             Eğer son soruysa
-             ok yerine kalp göster
-            */
 
             const nextButton =
                 document.getElementById(
@@ -912,11 +1169,6 @@
             }
 
 
-            /*
-             Cevap alanına
-             yumuşakça kaydır
-            */
-
             setTimeout(() => {
 
                 result.scrollIntoView({
@@ -935,10 +1187,6 @@
 
         function nextQuestion() {
 
-            /*
-             Son sorudaysak
-            */
-
             if (
                 currentQuestion ===
                 questions.length - 1
@@ -951,16 +1199,8 @@
             }
 
 
-            /*
-             Bir sonraki soruya geç
-            */
-
             currentQuestion++;
 
-
-            /*
-             Soruyu değiştir
-            */
 
             document.getElementById(
                 "question"
@@ -970,10 +1210,6 @@
                 ].question;
 
 
-            /*
-             Soru numarası
-            */
-
             document.getElementById(
                 "questionNumber"
             ).textContent =
@@ -982,29 +1218,17 @@
                 " / 6";
 
 
-            /*
-             Şıkları tekrar göster
-            */
-
             document.getElementById(
                 "buttons"
             ).style.display =
                 "flex";
 
 
-            /*
-             Eski cevabı gizle
-            */
-
             document.getElementById(
                 "result"
             ).style.display =
                 "none";
 
-
-            /*
-             Sayfanın üst kısmına dön
-            */
 
             window.scrollTo({
                 top: 0,
