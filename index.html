@@ -1,17 +1,25 @@
-<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta
-name="viewport"
-content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 
-«»
+<!DOCTYPE html>
+<html lang="tr">
 
-<title>Boyut Hesaplayıcı</title><style>
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<title>Boyut Hesaplayıcı</title>
+
+<style>
 
 @import url('https://fonts.cdnfonts.com/css/limon-milk');
 
-
 /* =========================
-   TEMEL AYARLAR
-========================== */
+   TEMEL
+========================= */
 
 * {
     margin: 0;
@@ -66,7 +74,7 @@ body {
 
 /* =========================
    ANA KUTU
-========================== */
+========================= */
 
 .container {
 
@@ -78,15 +86,17 @@ body {
     text-align: center;
 
     background:
-        rgba(255, 255, 255, 0.07);
+        rgba(255,255,255,0.07);
 
     border:
-        1px solid rgba(255, 255, 255, 0.14);
+        1px solid
+        rgba(255,255,255,0.14);
 
     border-radius: 30px;
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.35);
+        0 15px 40px
+        rgba(0,0,0,0.35);
 
     animation:
         containerIn 0.6s ease;
@@ -122,7 +132,7 @@ body {
 
 /* =========================
    BAŞLIK
-========================== */
+========================= */
 
 h1 {
 
@@ -145,13 +155,12 @@ h1 {
             180,
             0.55
         );
-
 }
 
 
 /* =========================
    AÇIKLAMA
-========================== */
+========================= */
 
 .subtitle {
 
@@ -168,13 +177,12 @@ h1 {
         );
 
     margin-bottom: 30px;
-
 }
 
 
 /* =========================
    BUTONLAR
-========================== */
+========================= */
 
 .buttons {
 
@@ -187,7 +195,6 @@ h1 {
     gap: 18px;
 
     flex-wrap: wrap;
-
 }
 
 
@@ -217,14 +224,12 @@ button {
 
     -webkit-tap-highlight-color:
         transparent;
-
 }
 
 
 .gender-button {
 
     background:
-
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -232,7 +237,6 @@ button {
         );
 
     box-shadow:
-
         0 8px 22px
         rgba(
             255,
@@ -240,13 +244,12 @@ button {
             163,
             0.30
         );
-
 }
 
 
 /* =========================
    HESAPLAYICI
-========================== */
+========================= */
 
 .calculator {
 
@@ -254,7 +257,6 @@ button {
 
     animation:
         resultIn 0.5s ease;
-
 }
 
 
@@ -263,7 +265,6 @@ button {
     margin-bottom: 18px;
 
     text-align: left;
-
 }
 
 
@@ -282,7 +283,6 @@ label {
             255,
             0.80
         );
-
 }
 
 
@@ -295,7 +295,6 @@ input {
     border-radius: 999px;
 
     border:
-
         1px solid
         rgba(
             255,
@@ -305,7 +304,6 @@ input {
         );
 
     background:
-
         rgba(
             255,
             255,
@@ -320,14 +318,12 @@ input {
     font-size: 16px;
 
     outline: none;
-
 }
 
 
 input:focus {
 
     border-color:
-
         rgba(
             255,
             79,
@@ -336,7 +332,6 @@ input:focus {
         );
 
     box-shadow:
-
         0 0 18px
         rgba(
             255,
@@ -344,21 +339,18 @@ input:focus {
             163,
             0.25
         );
-
 }
 
 
 input::placeholder {
 
     color:
-
         rgba(
             255,
             255,
             255,
             0.35
         );
-
 }
 
 
@@ -367,7 +359,6 @@ input::placeholder {
     margin-top: 15px;
 
     background:
-
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -375,7 +366,6 @@ input::placeholder {
         );
 
     box-shadow:
-
         0 8px 22px
         rgba(
             255,
@@ -383,13 +373,12 @@ input::placeholder {
             163,
             0.30
         );
-
 }
 
 
 /* =========================
    SONUÇ
-========================== */
+========================= */
 
 #result {
 
@@ -399,7 +388,6 @@ input::placeholder {
 
     animation:
         resultIn 0.4s ease;
-
 }
 
 
@@ -424,7 +412,6 @@ input::placeholder {
             translateY(0);
 
     }
-
 }
 
 
@@ -435,7 +422,6 @@ input::placeholder {
     border-radius: 22px;
 
     background:
-
         rgba(
             255,
             255,
@@ -444,7 +430,6 @@ input::placeholder {
         );
 
     border:
-
         1px solid
         rgba(
             255,
@@ -454,7 +439,6 @@ input::placeholder {
         );
 
     box-shadow:
-
         0 10px 30px
         rgba(
             0,
@@ -462,18 +446,16 @@ input::placeholder {
             0,
             0.25
         );
-
 }
 
 
 .category {
 
-    font-size: 27px;
+    font-size: 28px;
 
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
     color: #ff79bd;
-
 }
 
 
@@ -483,8 +465,25 @@ input::placeholder {
 
     font-weight: bold;
 
-    margin-bottom: 12px;
+    margin-bottom: 18px;
+}
 
+
+.detail {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
 }
 
 
@@ -495,20 +494,18 @@ input::placeholder {
     line-height: 1.7;
 
     color:
-
         rgba(
             255,
             255,
             255,
             0.90
         );
-
 }
 
 
 /* =========================
    SONRAKİ BUTON
-========================== */
+========================= */
 
 .next-button {
 
@@ -531,7 +528,6 @@ input::placeholder {
     border-radius: 50%;
 
     background:
-
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -539,7 +535,6 @@ input::placeholder {
         );
 
     box-shadow:
-
         0 7px 20px
         rgba(
             255,
@@ -549,13 +544,12 @@ input::placeholder {
         );
 
     font-size: 25px;
-
 }
 
 
 /* =========================
    FİNAL
-========================== */
+========================= */
 
 .final-page {
 
@@ -563,7 +557,6 @@ input::placeholder {
 
     animation:
         resultIn 0.5s ease;
-
 }
 
 
@@ -578,13 +571,12 @@ input::placeholder {
     border-radius: 25px;
 
     display: none;
-
 }
 
 
 /* =========================
    KALPLER
-========================== */
+========================= */
 
 .heart {
 
@@ -602,7 +594,6 @@ input::placeholder {
         heartRise 9s linear infinite;
 
     z-index: 1;
-
 }
 
 
@@ -635,13 +626,12 @@ input::placeholder {
         opacity: 0;
 
     }
-
 }
 
 
 /* =========================
    HOVER
-========================== */
+========================= */
 
 @media (hover: hover) {
 
@@ -666,12 +656,14 @@ button:active {
 
 /* =========================
    MOBİL
-========================== */
+========================= */
 
 @media (max-width: 600px) {
 
     body {
+
         padding: 15px;
+
     }
 
     .container {
@@ -712,8 +704,8 @@ button:active {
 
 
 /* =========================
-   HAREKET AZALTMA
-========================== */
+   HAREKET
+========================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -729,33 +721,58 @@ button:active {
 
 }
 
-</style></head><body><!-- =========================
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
      KALPLER
-========================== --><div
+========================= -->
+
+<div
     class="heart"
     style="left:10%; animation-delay:0s;"
 >
     💖
-</div><div
+</div>
+
+<div
     class="heart"
     style="left:35%; animation-delay:3s;"
 >
     ♡
-</div><div
+</div>
+
+<div
     class="heart"
     style="left:65%; animation-delay:5s;"
 >
     💗
-</div><div
+</div>
+
+<div
     class="heart"
     style="left:85%; animation-delay:1s;"
 >
     ♡
-</div><!-- =========================
+</div>
+
+
+
+<!-- =========================
      ANA KUTU
-========================== --><main class="container"><!-- =========================
-     CİNSİYET
-========================== -->
+========================= -->
+
+<main class="container">
+
+
+<!-- =========================
+     CİNSİYET SEÇİMİ
+========================= -->
 
 <section id="genderPage">
 
@@ -796,7 +813,7 @@ button:active {
 
 <!-- =========================
      HESAPLAYICI
-========================== -->
+========================= -->
 
 <section
     id="calculatorPage"
@@ -807,13 +824,14 @@ button:active {
         Penis Boyu Hesaplayıcı 📏
     </h1>
 
+
     <p class="subtitle">
 
-        Sertleşmiş penis boyunu ve çevresini
-        santimetre cinsinden gir.
-        Sonucun, yayımlanmış klinik ölçümlere
-        dayalı yaklaşık bir persentil olarak
-        hesaplanacaktır.
+        Sertleşmiş uzunluğunu ve çevresini
+        santimetre olarak gir.
+        Sonuç, klinik ölçümlere dayalı
+        yaklaşık bir persentil olarak
+        hesaplanır.
 
     </p>
 
@@ -825,12 +843,10 @@ button:active {
         </label>
 
         <input
-            type="number"
+            type="text"
+            inputmode="decimal"
             id="length"
-            placeholder="Örn: 13.5"
-            step="0.1"
-            min="1"
-            max="40"
+            placeholder="Örn: 13,5"
         >
 
     </div>
@@ -843,12 +859,10 @@ button:active {
         </label>
 
         <input
-            type="number"
+            type="text"
+            inputmode="decimal"
             id="girth"
-            placeholder="Örn: 11.5"
-            step="0.1"
-            min="1"
-            max="30"
+            placeholder="Örn: 11,5"
         >
 
     </div>
@@ -867,7 +881,7 @@ button:active {
 
 <!-- =========================
      SONUÇ
-========================== -->
+========================= -->
 
 <section id="result">
 
@@ -876,22 +890,25 @@ button:active {
         <div
             class="category"
             id="category"
-        >
-        </div>
+        ></div>
 
 
         <div
             class="percentile"
             id="percentile"
-        >
-        </div>
+        ></div>
+
+
+        <div
+            class="detail"
+            id="detail"
+        ></div>
 
 
         <div
             class="message"
             id="message"
-        >
-        </div>
+        ></div>
 
     </div>
 
@@ -909,7 +926,7 @@ button:active {
 
 <!-- =========================
      FİNAL
-========================== -->
+========================= -->
 
 <section
     id="finalPage"
@@ -926,31 +943,40 @@ button:active {
         <div
             class="message"
             id="finalMessage"
-        >
-        </div>
+        ></div>
 
     </div>
 
 
     <!--
-        RESİMLERİ BURADAN
-        DEĞİŞTİREBİLİRSİN
+        BURAYA RESİM GELECEK.
+
+        Örneğin:
+
+        "images/buyuk.jpg"
+
+        şeklinde aşağıdaki JavaScript
+        bölümüne yazabilirsin.
     -->
 
     <img
         id="finalImage"
         class="final-image"
-        src=""
         alt="Sonuç görseli"
     >
 
 </section>
 
-</main><script>
+
+</main>
+
+
+
+<script>
 
 
 /* =====================================================
-   SEÇİLEN CİNSİYET
+   DEĞİŞKENLER
 ===================================================== */
 
 let selectedGender = "";
@@ -959,7 +985,7 @@ let selectedCategory = "";
 
 
 /* =====================================================
-   CİNSİYET SEÇİMİ
+   CİNSİYET
 ===================================================== */
 
 function selectGender(gender) {
@@ -979,41 +1005,33 @@ function selectGender(gender) {
 }
 
 
-
 /* =====================================================
-   NORMAL DAĞILIMDAN PERCENTILE HESAPLAMA
+   TÜRKÇE / İNGİLİZCE SAYI OKUMA
 
-   Veale et al. çalışmasında:
-   
-   Sertleşmiş uzunluk:
-   Ortalama = 13.12 cm
-   SD = 1.66 cm
-
-   Sertleşmiş çevre:
-   Ortalama = 11.66 cm
-   SD = 1.10 cm
-
-   Çalışma nomogramlarını oluştururken
-   normal dağılımdan 20.000 simülasyon
-   kullanmıştır.
+   13,5  -> 13.5
+   13.5  -> 13.5
 ===================================================== */
 
+function parseNumber(value) {
 
-/* Standart normal CDF */
+    if (!value) {
+        return NaN;
+    }
 
-function normalCDF(z) {
 
-    return 0.5 * (
-        1 +
-        erf(
-            z / Math.sqrt(2)
-        )
-    );
+    value = value
+        .trim()
+        .replace(",", ".");
+
+
+    return Number(value);
 
 }
 
 
-/* Error function */
+/* =====================================================
+   ERROR FUNCTION
+===================================================== */
 
 function erf(x) {
 
@@ -1023,12 +1041,23 @@ function erf(x) {
     x = Math.abs(x);
 
 
-    const a1 = 0.254829592;
-    const a2 = -0.284496736;
-    const a3 = 1.421413741;
-    const a4 = -1.453152027;
-    const a5 = 1.061405429;
-    const p = 0.3275911;
+    const a1 =
+        0.254829592;
+
+    const a2 =
+        -0.284496736;
+
+    const a3 =
+        1.421413741;
+
+    const a4 =
+        -1.453152027;
+
+    const a5 =
+        1.061405429;
+
+    const p =
+        0.3275911;
 
 
     const t =
@@ -1054,7 +1083,8 @@ function erf(x) {
                     a2
                 ) * t +
                 a1
-            ) * t *
+            ) *
+            t *
             Math.exp(
                 -x * x
             )
@@ -1066,51 +1096,113 @@ function erf(x) {
 }
 
 
-
 /* =====================================================
-   PERCENTILE HESAPLAMA
+   NORMAL DISTRIBUTION
+
+   Z değerinden yüzdelik hesaplar.
 ===================================================== */
 
-function calculatePercentile(value, mean, sd) {
+function normalCDF(z) {
 
-    const z =
-        (value - mean) / sd;
-
-
-    let percentile =
-        normalCDF(z) * 100;
-
-
-    /*
-       Sonucu %1 ile %99.9 arasında tutuyoruz.
-       Böylece ekranda saçma şekilde %0.0001
-       veya %100 görünmez.
-    */
-
-    percentile =
-        Math.max(
-            1,
-            Math.min(
-                99.9,
-                percentile
+    return (
+        0.5 *
+        (
+            1 +
+            erf(
+                z /
+                Math.sqrt(2)
             )
-        );
-
-
-    return percentile;
+        )
+    );
 
 }
 
 
+/* =====================================================
+   UZUNLUK PERCENTILE
+
+   Ortalama: 13.12 cm
+   SD: 1.66 cm
+
+   Veale et al. 2015
+===================================================== */
+
+function getLengthPercentile(length) {
+
+    const mean =
+        13.12;
+
+    const sd =
+        1.66;
+
+
+    const z =
+        (
+            length -
+            mean
+        ) / sd;
+
+
+    return (
+        normalCDF(z) *
+        100
+    );
+
+}
+
 
 /* =====================================================
-   KATEGORİ BELİRLEME
+   ÇEVRE PERCENTILE
 
-   0–5     = Çok Küçük
-   5–25    = Küçük
-   25–75   = Ortalama
-   75–95   = Büyük
-   95–100  = Mega
+   Ortalama: 11.66 cm
+   SD: 1.10 cm
+
+   Veale et al. 2015
+===================================================== */
+
+function getGirthPercentile(girth) {
+
+    const mean =
+        11.66;
+
+    const sd =
+        1.10;
+
+
+    const z =
+        (
+            girth -
+            mean
+        ) / sd;
+
+
+    return (
+        normalCDF(z) *
+        100
+    );
+
+}
+
+
+/* =====================================================
+   SINIRLA
+===================================================== */
+
+function clampPercentile(value) {
+
+    return Math.max(
+        0.1,
+        Math.min(
+            99.9,
+            value
+        )
+    );
+
+}
+
+
+/* =====================================================
+   KATEGORİ
 ===================================================== */
 
 function getCategory(percentile) {
@@ -1121,13 +1213,11 @@ function getCategory(percentile) {
 
     }
 
-
     if (percentile < 25) {
 
         return "Küçük";
 
     }
-
 
     if (percentile < 75) {
 
@@ -1135,29 +1225,30 @@ function getCategory(percentile) {
 
     }
 
-
     if (percentile < 95) {
 
         return "Büyük";
 
     }
 
-
     return "Mega";
 
 }
 
 
-
 /* =====================================================
-   HESAPLAMA
+   HESAPLA
 ===================================================== */
 
 function calculate() {
 
 
+    /* ---------------------------------
+       DEĞERLERİ AL
+    --------------------------------- */
+
     const length =
-        parseFloat(
+        parseNumber(
             document
                 .getElementById("length")
                 .value
@@ -1165,20 +1256,20 @@ function calculate() {
 
 
     const girth =
-        parseFloat(
+        parseNumber(
             document
                 .getElementById("girth")
                 .value
         );
 
 
-    /* =========================
+    /* ---------------------------------
        KONTROL
-    ========================== */
+    --------------------------------- */
 
     if (
-        isNaN(length) ||
-        isNaN(girth)
+        !Number.isFinite(length) ||
+        !Number.isFinite(girth)
     ) {
 
         alert(
@@ -1196,7 +1287,7 @@ function calculate() {
     ) {
 
         alert(
-            "Lütfen geçerli ölçüler gir."
+            "Lütfen 0'dan büyük geçerli ölçüler gir."
         );
 
         return;
@@ -1204,108 +1295,78 @@ function calculate() {
     }
 
 
-
-    /* =================================================
-       VEale et al. 2015
-
-       Erect length:
-       mean = 13.12
-       SD   = 1.66
-
-       Erect circumference:
-       mean = 11.66
-       SD   = 1.10
-    ================================================= */
+    /* ---------------------------------
+       GERÇEK HESAPLAMA
+    --------------------------------- */
 
 
     const lengthPercentile =
-        calculatePercentile(
-            length,
-            13.12,
-            1.66
+        clampPercentile(
+            getLengthPercentile(
+                length
+            )
         );
 
 
     const girthPercentile =
-        calculatePercentile(
-            girth,
-            11.66,
-            1.10
+        clampPercentile(
+            getGirthPercentile(
+                girth
+            )
         );
 
 
+    /* ---------------------------------
+       İKİ PERCENTILE'I BİRLEŞTİR
 
-    /* =================================================
-       UZUNLUK + ÇEVREYİ BİRLEŞTİR
+       %50 uzunluk
+       %50 çevre
+    --------------------------------- */
 
-       İkisini eşit ağırlıkta kullanıyoruz.
-
-       Örneğin:
-
-       Uzunluk %80
-       Çevre   %60
-
-       Birleşik = %70
-    ================================================= */
-
-
-    const combinedPercentile =
+    const overallPercentile =
         (
             lengthPercentile +
             girthPercentile
         ) / 2;
 
 
-
-    /* =================================================
+    /* ---------------------------------
        KATEGORİ
-    ================================================= */
+    --------------------------------- */
 
     selectedCategory =
         getCategory(
-            combinedPercentile
+            overallPercentile
         );
 
 
+    /* ---------------------------------
+       MESAJ
+    --------------------------------- */
 
-    /* =================================================
-       SONUÇ MESAJLARI
-    ================================================= */
-
-    const categoryMessages = {
+    const messages = {
 
         "Çok Küçük":
-
-        "Ölçümünüz, kullanılan klinik veri setinin alt yüzdeliklerinde yer alıyor.",
-
+            "Ölçümünüz referans dağılımın en alt yüzdeliklerinde bulunuyor.",
 
         "Küçük":
-
-        "Ölçümünüz, referans dağılımın ortalamanın altında kalan bölümünde yer alıyor.",
-
+            "Ölçümünüz referans dağılımın ortalamanın altında kalan bölümünde bulunuyor.",
 
         "Ortalama":
-
-        "Ölçümünüz, referans dağılımın orta bölümünde yer alıyor.",
-
+            "Ölçümünüz referans dağılımın orta bölümünde bulunuyor.",
 
         "Büyük":
-
-        "Ölçümünüz, referans dağılımın üst bölümünde yer alıyor.",
-
+            "Ölçümünüz referans dağılımın üst bölümünde bulunuyor.",
 
         "Mega":
-
-        "Ölçümünüz, referans dağılımın en üst yüzdeliklerinde yer alıyor."
+            "Ölçümünüz referans dağılımın en üst yüzdeliklerinde bulunuyor."
 
     };
 
 
-
-    /* =================================================
+    /* ---------------------------------
        EKRANA YAZ
-    ================================================= */
-
+    --------------------------------- */
 
     document
         .getElementById("category")
@@ -1313,48 +1374,56 @@ function calculate() {
         selectedCategory;
 
 
-
     document
         .getElementById("percentile")
         .textContent =
 
         "Yaklaşık %" +
-        combinedPercentile.toFixed(1) +
+        overallPercentile.toFixed(1) +
         " persentil";
 
+
+    document
+        .getElementById("detail")
+        .innerHTML =
+
+        "📏 Uzunluk: <b>%" +
+        lengthPercentile.toFixed(1) +
+        "</b><br>" +
+
+        "⭕ Çevre: <b>%" +
+        girthPercentile.toFixed(1) +
+        "</b>";
 
 
     document
         .getElementById("message")
         .textContent =
-
-        categoryMessages[
-            selectedCategory
-        ];
+        messages[selectedCategory];
 
 
-
-    /* =================================================
-       HESAPLAYICIYI GİZLE
-    ================================================= */
+    /* ---------------------------------
+       SAYFALARI DEĞİŞTİR
+    --------------------------------- */
 
     document
         .getElementById("calculatorPage")
-        .style.display = "none";
+        .style.display =
+        "none";
 
-
-
-    /* =================================================
-       SONUCU GÖSTER
-    ================================================= */
 
     document
         .getElementById("result")
-        .style.display = "block";
+        .style.display =
+        "block";
 
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
-
 
 
 /* =====================================================
@@ -1366,108 +1435,88 @@ function showFinal() {
 
     document
         .getElementById("result")
-        .style.display = "none";
+        .style.display =
+        "none";
 
 
     document
         .getElementById("finalPage")
-        .style.display = "block";
+        .style.display =
+        "block";
 
 
-
-    /* =================================================
-       KATEGORİYE GÖRE ÖZEL YAZILAR
-
-       BURAYI DAHA SONRA SENİN
-       İSTEDİĞİN METİNLERLE DEĞİŞTİREBİLİRİZ.
-    ================================================= */
-
+    /* ---------------------------------
+       KATEGORİ MESAJLARI
+    --------------------------------- */
 
     const finalTexts = {
 
-
         "Çok Küçük":
-
-        "Buraya Çok Küçük kategorisine özel hazırlayacağımız metin gelecek.",
-
+            "Çok Küçük kategorisine özel yazını buraya ekleyebilirsin.",
 
         "Küçük":
-
-        "Buraya Küçük kategorisine özel hazırlayacağımız metin gelecek.",
-
+            "Küçük kategorisine özel yazını buraya ekleyebilirsin.",
 
         "Ortalama":
-
-        "Buraya Ortalama kategorisine özel hazırlayacağımız metin gelecek.",
-
+            "Ortalama kategorisine özel yazını buraya ekleyebilirsin.",
 
         "Büyük":
-
-        "Buraya Büyük kategorisine özel hazırlayacağımız metin gelecek.",
-
+            "Büyük kategorisine özel yazını buraya ekleyebilirsin.",
 
         "Mega":
-
-        "Buraya Mega kategorisine özel hazırlayacağımız metin gelecek."
+            "Mega kategorisine özel yazını buraya ekleyebilirsin."
 
     };
-
 
 
     document
         .getElementById("finalTitle")
         .textContent =
-
         selectedCategory +
         " Kategorisi ✨";
-
 
 
     document
         .getElementById("finalMessage")
         .textContent =
-
-        finalTexts[
-            selectedCategory
-        ];
+        finalTexts[selectedCategory];
 
 
-
-    /* =================================================
+    /* ---------------------------------
        RESİMLER
 
-       ÖRNEK:
-
-       "Küçük": "images/kucuk.jpg"
-
-       şeklinde değiştirebilirsin.
-    ================================================= */
-
+       BURAYA KENDİ RESİMLERİNİ YAZ
+    --------------------------------- */
 
     const images = {
 
-        "Çok Küçük": "",
+        "Çok Küçük":
+            "",
 
-        "Küçük": "",
+        "Küçük":
+            "",
 
-        "Ortalama": "",
+        "Ortalama":
+            "",
 
-        "Büyük": "",
+        "Büyük":
+            "",
 
-        "Mega": ""
+        "Mega":
+            ""
 
     };
 
 
     const image =
-        document.getElementById(
-            "finalImage"
-        );
+        document
+            .getElementById(
+                "finalImage"
+            );
 
 
     if (
-        images[selectedCategory] &&
-        images[selectedCategory] !== ""
+        images[selectedCategory]
     ) {
 
         image.src =
@@ -1480,5 +1529,8 @@ function showFinal() {
 
 }
 
+</script>
 
-</script></body></html>
+</body>
+
+</html>
