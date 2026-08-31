@@ -1,708 +1,743 @@
+Tabii koçum 😄 Mevcut arka planı, renkleri, cam efektli oval kutuyu ve kalpleri koruyarak sistemi tamamen istediğin akışa çevirdim:
+Akış:
+👤 Erkek / Kadın seçimi
+📏 Boy ve çevre bilgilerini girme
+📊 5 kategoriden bir sonuç
+➜ Yuvarlak butonla devam etme
+💬 Sonuca özel açıklama + altta senin ekleyeceğin görsel
+Kategori sınırlarını örnek olarak koydum; istersen daha sonra kolayca değiştirebilirsin.
+Yazı
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
 
-    <title>Tatlı Kız Meliss 💖</title>
+<title>Boyut Hesaplayıcı</title>
 
-    <style>
+<style>
 
-        @import url('https://fonts.cdnfonts.com/css/limon-milk');
+@import url('https://fonts.cdnfonts.com/css/limon-milk');
 
+/* =========================
+   TEMEL AYARLAR
+========================== */
 
-        /* =========================
-           TEMEL AYARLAR
-        ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
 
+body {
 
-        html,
-        body {
-            width: 100%;
-            min-height: 100%;
-            overflow-x: hidden;
-        }
+    min-height: 100vh;
+    min-height: 100dvh;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        body {
+    padding: 20px;
 
-            min-height: 100vh;
-            min-height: 100dvh;
+    font-family: 'Lemon/Milk', sans-serif;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    background:
 
-            padding: 20px;
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 105, 180, 0.25),
+            transparent 35%
+        ),
 
-            font-family: 'Lemon/Milk', sans-serif;
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(138, 43, 226, 0.25),
+            transparent 35%
+        ),
 
-            background:
+        linear-gradient(
+            135deg,
+            #16001f,
+            #3b0b45,
+            #13001c
+        );
 
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(255, 105, 180, 0.25),
-                    transparent 35%
-                ),
+    color: white;
+}
 
-                radial-gradient(
-                    circle at 80% 80%,
-                    rgba(138, 43, 226, 0.25),
-                    transparent 35%
-                ),
 
-                linear-gradient(
-                    135deg,
-                    #16001f,
-                    #3b0b45,
-                    #13001c
-                );
+/* =========================
+   ANA KUTU
+========================== */
 
-            color: white;
-        }
+.container {
 
+    width: 100%;
+    max-width: 650px;
 
-        /* =========================
-           ANA KUTU
-        ========================== */
+    padding: 50px 35px;
 
-        .container {
+    text-align: center;
 
-            width: 100%;
-            max-width: 650px;
+    background:
+        rgba(255, 255, 255, 0.07);
 
-            padding: 50px 35px;
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
 
-            text-align: center;
+    border-radius: 30px;
 
-            background:
-                rgba(255, 255, 255, 0.07);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
 
-            border:
-                1px solid rgba(255, 255, 255, 0.14);
+    animation:
+        containerIn 0.6s ease;
 
-            border-radius: 30px;
+    position: relative;
+    z-index: 5;
+}
 
-            box-shadow:
-                0 15px 40px rgba(0, 0, 0, 0.35);
 
-            animation:
-                containerIn 0.6s ease;
+@keyframes containerIn {
 
-            position: relative;
-            z-index: 5;
-        }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-        @keyframes containerIn {
+}
 
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+/* =========================
+   BAŞLIK
+========================== */
 
-        }
+h1 {
 
+    font-size:
+        clamp(
+            26px,
+            6vw,
+            42px
+        );
 
-        /* =========================
-           BAŞLIK
-        ========================== */
+    line-height: 1.35;
 
-        h1 {
+    margin-bottom: 20px;
 
-            font-size:
-                clamp(
-                    26px,
-                    6vw,
-                    46px
-                );
+    text-shadow:
+        0 0 12px rgba(
+            255,
+            105,
+            180,
+            0.55
+        );
 
-            line-height: 1.35;
+}
 
-            margin-bottom: 35px;
 
-            text-shadow:
-                0 0 12px rgba(
-                    255,
-                    105,
-                    180,
-                    0.55
-                );
-        }
+/* =========================
+   ALT BAŞLIK
+========================== */
 
+.subtitle {
 
-        /* =========================
-           SORU NUMARASI
-        ========================== */
+    font-size: 14px;
 
-        .question-number {
+    line-height: 1.6;
 
-            font-size: 13px;
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.70
+        );
 
-            color:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.55
-                );
+    margin-bottom: 30px;
 
-            margin-bottom: 12px;
+}
 
-            letter-spacing: 1px;
-        }
 
+/* =========================
+   BUTONLAR
+========================== */
 
-        /* =========================
-           BUTONLAR
-        ========================== */
+.buttons {
 
-        .buttons {
+    display: flex;
 
-            display: flex;
+    justify-content: center;
+    align-items: center;
 
-            justify-content: center;
+    gap: 18px;
 
-            align-items: center;
+    flex-wrap: wrap;
 
-            gap: 18px;
+}
 
-            flex-wrap: wrap;
-        }
 
+button {
 
-        button {
+    min-width: 150px;
 
-            min-width: 150px;
+    padding: 15px 35px;
 
-            padding: 15px 35px;
+    border: none;
 
-            border: none;
+    border-radius: 999px;
 
-            border-radius: 999px;
+    color: white;
 
-            color: white;
+    font-family: inherit;
 
-            font-family: inherit;
+    font-size: 16px;
 
-            font-size: 17px;
+    font-weight: bold;
 
-            font-weight: bold;
+    cursor: pointer;
 
-            cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+    -webkit-tap-highlight-color:
+        transparent;
 
-            -webkit-tap-highlight-color:
-                transparent;
-        }
+}
 
 
-        /* =========================
-           EVET
-        ========================== */
+.gender-button {
 
-        .yes {
+    background:
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff4fa3,
-                    #ff79bd
-                );
+        linear-gradient(
+            135deg,
+            #ff4fa3,
+            #b85cff
+        );
 
-            box-shadow:
-                0 8px 22px rgba(
-                    255,
-                    79,
-                    163,
-                    0.30
-                );
-        }
+    box-shadow:
 
+        0 8px 22px
+        rgba(
+            255,
+            79,
+            163,
+            0.30
+        );
 
-        /* =========================
-           HAYIR
-        ========================== */
+}
 
-        .no {
 
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.10
-                );
+/* =========================
+   FORM
+========================== */
 
-            border:
-                1px solid rgba(
-                    255,
-                    255,
-                    255,
-                    0.20
-                );
-        }
+.calculator {
 
+    display: none;
 
-        /* =========================
-           CEVAP ALANI
-        ========================== */
+    animation:
+        resultIn 0.5s ease;
 
-        #result {
+}
 
-            display: none;
 
-            margin-top: 30px;
+.input-group {
 
-            animation:
-                resultIn 0.4s ease;
-        }
+    margin-bottom: 18px;
 
+    text-align: left;
 
-        @keyframes resultIn {
+}
 
-            from {
 
-                opacity: 0;
+label {
 
-                transform:
-                    scale(0.95)
-                    translateY(8px);
-            }
+    display: block;
 
-            to {
+    margin-bottom: 8px;
 
-                opacity: 1;
+    font-size: 14px;
 
-                transform:
-                    scale(1)
-                    translateY(0);
-            }
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.80
+        );
 
-        }
+}
 
 
-        /* =========================
-           CEVAP KUTUSU
-        ========================== */
+input {
 
-        .message-box {
+    width: 100%;
 
-            padding: 22px 20px;
+    padding: 16px 20px;
 
-            border-radius: 22px;
+    border-radius: 999px;
 
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.08
-                );
+    border:
 
-            border:
-                1px solid rgba(
-                    255,
-                    255,
-                    255,
-                    0.14
-                );
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.18
+        );
 
-            box-shadow:
-                0 10px 30px rgba(
-                    0,
-                    0,
-                    0,
-                    0.25
-                );
-        }
+    background:
 
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
 
-        .message {
+    color: white;
 
-            font-size: 16px;
+    font-family: inherit;
 
-            line-height: 1.6;
+    font-size: 16px;
 
-            color:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.90
-                );
-        }
+    outline: none;
 
+}
 
-        /* =========================
-           SONRAKİ SORU BUTONU
-        ========================== */
 
-        .next-button {
+input:focus {
 
-            display: flex;
+    border-color:
+        rgba(
+            255,
+            79,
+            163,
+            0.8
+        );
 
-            align-items: center;
+    box-shadow:
 
-            justify-content: center;
+        0 0 18px
+        rgba(
+            255,
+            79,
+            163,
+            0.25
+        );
 
-            width: 48px;
+}
 
-            height: 48px;
 
-            min-width: 48px;
+input::placeholder {
 
-            padding: 0;
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
 
-            margin: 20px auto 0;
+}
 
-            border-radius: 50%;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff4fa3,
-                    #b85cff
-                );
+/* =========================
+   HESAPLA BUTONU
+========================== */
 
-            box-shadow:
-                0 7px 20px rgba(
-                    255,
-                    79,
-                    163,
-                    0.35
-                );
+.calculate-button {
 
-            font-size: 22px;
-        }
+    margin-top: 15px;
 
+    background:
 
-        /* =========================
-           SES BUTONU
-        ========================== */
+        linear-gradient(
+            135deg,
+            #ff4fa3,
+            #ff79bd
+        );
 
-        .music-button {
+    box-shadow:
 
-            position: fixed;
+        0 8px 22px
+        rgba(
+            255,
+            79,
+            163,
+            0.30
+        );
 
-            bottom:
-                calc(
-                    20px +
-                    env(safe-area-inset-bottom)
-                );
+}
 
-            right: 20px;
 
-            width: 52px;
+/* =========================
+   SONUÇ
+========================== */
 
-            height: 52px;
+#result {
 
-            min-width: 52px;
+    display: none;
 
-            padding: 0;
+    margin-top: 30px;
 
-            display: flex;
+    animation:
+        resultIn 0.4s ease;
 
-            align-items: center;
+}
 
-            justify-content: center;
 
-            border-radius: 50%;
+@keyframes resultIn {
 
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.10
-                );
+    from {
 
-            border:
-                1px solid rgba(
-                    255,
-                    255,
-                    255,
-                    0.20
-                );
+        opacity: 0;
 
-            box-shadow:
-                0 8px 25px rgba(
-                    0,
-                    0,
-                    0,
-                    0.30
-                );
+        transform:
+            scale(0.95)
+            translateY(8px);
 
-            backdrop-filter:
-                blur(10px);
+    }
 
-            -webkit-backdrop-filter:
-                blur(10px);
+    to {
 
-            font-size: 21px;
+        opacity: 1;
 
-            z-index: 100;
+        transform:
+            scale(1)
+            translateY(0);
 
-            margin: 0;
+    }
 
-            transition:
-                transform 0.2s ease,
-                background 0.2s ease;
-        }
+}
 
 
-        .music-button:hover {
+.message-box {
 
-            transform:
-                translateY(-3px)
-                scale(1.05);
-        }
+    padding: 25px 20px;
 
+    border-radius: 22px;
 
-        .music-button:active {
+    background:
 
-            transform:
-                scale(0.92);
-        }
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
 
+    border:
 
-        /* =========================
-           KALPLER
-        ========================== */
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.14
+        );
 
-        .heart {
+    box-shadow:
 
-            position: fixed;
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
 
-            bottom: -30px;
+}
 
-            font-size: 20px;
 
-            opacity: 0.35;
+.category {
 
-            pointer-events: none;
+    font-size: 25px;
 
-            animation:
-                heartRise 9s linear infinite;
+    margin-bottom: 15px;
 
-            z-index: 1;
-        }
+    color: #ff79bd;
 
+}
 
-        @keyframes heartRise {
 
-            0% {
+.message {
 
-                transform:
-                    translateY(0)
-                    rotate(0deg);
+    font-size: 15px;
 
-                opacity: 0;
-            }
+    line-height: 1.7;
 
-            15% {
-                opacity: 0.35;
-            }
+    color:
 
-            85% {
-                opacity: 0.25;
-            }
+        rgba(
+            255,
+            255,
+            255,
+            0.90
+        );
 
-            100% {
+}
 
-                transform:
-                    translateY(-110vh)
-                    rotate(180deg);
 
-                opacity: 0;
-            }
+/* =========================
+   SONRAKİ BUTONU
+========================== */
 
-        }
+.next-button {
 
+    display: flex;
 
-        /* =========================
-           HOVER
-        ========================== */
+    align-items: center;
+    justify-content: center;
 
-        @media (hover: hover) {
+    width: 55px;
+    height: 55px;
 
-            button:hover {
+    min-width: 55px;
 
-                transform:
-                    translateY(-3px)
-                    scale(1.03);
-            }
+    padding: 0;
 
-        }
+    margin: 22px auto 0;
 
+    border-radius: 50%;
 
-        button:active {
+    background:
 
-            transform:
-                scale(0.96);
-        }
+        linear-gradient(
+            135deg,
+            #ff4fa3,
+            #b85cff
+        );
 
+    box-shadow:
 
-        /* =========================
-           MOBİL
-        ========================== */
+        0 7px 20px
+        rgba(
+            255,
+            79,
+            163,
+            0.35
+        );
 
-        @media (max-width: 600px) {
+    font-size: 25px;
 
-            body {
+}
 
-                padding: 15px;
 
-                align-items: center;
-            }
+.next-button:hover {
 
+    transform:
+        translateY(-3px)
+        scale(1.05);
 
-            .container {
+}
 
-                padding:
-                    35px 20px;
 
-                border-radius:
-                    25px;
-            }
+.next-button:active {
 
+    transform:
+        scale(0.92);
 
-            h1 {
+}
 
-                font-size:
-                    clamp(
-                        24px,
-                        8vw,
-                        34px
-                    );
 
-                margin-bottom:
-                    28px;
-            }
+/* =========================
+   FİNAL SAYFASI
+========================== */
 
+.final-page {
 
-            .buttons {
+    display: none;
 
-                gap:
-                    12px;
-            }
+    animation:
+        resultIn 0.5s ease;
 
+}
 
-            button {
 
-                min-width:
-                    130px;
+.final-image {
 
-                padding:
-                    14px 25px;
+    width: 100%;
 
-                font-size:
-                    15px;
-            }
+    max-width: 350px;
 
+    margin-top: 25px;
 
-            .message {
+    border-radius: 25px;
 
-                font-size:
-                    14px;
-            }
+    display: none;
 
+}
 
-            .music-button {
 
-                width: 48px;
+/* =========================
+   KALPLER
+========================== */
 
-                height: 48px;
+.heart {
 
-                min-width: 48px;
+    position: fixed;
 
-                right: 15px;
+    bottom: -30px;
 
-                bottom:
-                    calc(
-                        15px +
-                        env(safe-area-inset-bottom)
-                    );
-            }
+    font-size: 20px;
 
-        }
+    opacity: 0.35;
 
+    pointer-events: none;
 
-        /* =========================
-           ÇOK KÜÇÜK TELEFON
-        ========================== */
+    animation:
+        heartRise 9s linear infinite;
 
-        @media (max-width: 380px) {
+    z-index: 1;
 
-            .container {
+}
 
-                padding:
-                    30px 16px;
-            }
 
+@keyframes heartRise {
 
-            h1 {
+    0% {
 
-                font-size:
-                    23px;
-            }
+        transform:
+            translateY(0)
+            rotate(0deg);
 
+        opacity: 0;
 
-            button {
+    }
 
-                min-width:
-                    120px;
+    15% {
+        opacity: 0.35;
+    }
 
-                padding:
-                    13px 20px;
+    85% {
+        opacity: 0.25;
+    }
 
-                font-size:
-                    14px;
-            }
+    100% {
 
-        }
+        transform:
+            translateY(-110vh)
+            rotate(180deg);
 
+        opacity: 0;
 
-        /* =========================
-           HAREKET AYARI
-        ========================== */
+    }
 
-        @media (
-            prefers-reduced-motion: reduce
-        ) {
+}
 
-            * {
 
-                animation:
-                    none !important;
+/* =========================
+   HOVER
+========================== */
 
-                transition:
-                    none !important;
-            }
+@media (hover: hover) {
 
-        }
+    button:hover {
 
-    </style>
+        transform:
+            translateY(-3px)
+            scale(1.03);
+
+    }
+
+}
+
+
+button:active {
+
+    transform:
+        scale(0.96);
+
+}
+
+
+/* =========================
+   MOBİL
+========================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+
+        padding:
+            35px 20px;
+
+        border-radius:
+            25px;
+
+    }
+
+    h1 {
+
+        font-size:
+            clamp(
+                24px,
+                8vw,
+                34px
+            );
+
+    }
+
+    button {
+
+        min-width: 130px;
+
+        padding:
+            14px 25px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =========================
+   HAREKET AZALTMA
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -710,599 +745,611 @@
 <body>
 
 
-    <!-- =========================
-         ARKA PLAN MÜZİĞİ
-    ========================== -->
+<!-- =========================
+     KALPLER
+========================== -->
 
-    <audio
-        id="backgroundMusic"
-        loop
-        preload="auto"
-    >
+<div class="heart" style="left: 10%; animation-delay: 0s;">
+    💖
+</div>
 
-        <source
-            src="muzik.mp3"
-            type="audio/mpeg"
-        >
+<div class="heart" style="left: 35%; animation-delay: 3s;">
+    ♡
+</div>
 
-    </audio>
+<div class="heart" style="left: 65%; animation-delay: 5s;">
+    💗
+</div>
 
-
-    <!-- =========================
-         KALPLER
-    ========================== -->
-
-    <div
-        class="heart"
-        style="
-            left: 10%;
-            animation-delay: 0s;
-        "
-    >
-        💖
-    </div>
+<div class="heart" style="left: 85%; animation-delay: 1s;">
+    ♡
+</div>
 
 
-    <div
-        class="heart"
-        style="
-            left: 35%;
-            animation-delay: 3s;
-        "
-    >
-        ♡
-    </div>
 
+<!-- =========================
+     ANA KUTU
+========================== -->
 
-    <div
-        class="heart"
-        style="
-            left: 65%;
-            animation-delay: 5s;
-        "
-    >
-        💗
-    </div>
-
-
-    <div
-        class="heart"
-        style="
-            left: 85%;
-            animation-delay: 1s;
-        "
-    >
-        ♡
-    </div>
+<main class="container">
 
 
     <!-- =========================
-         ANA İÇERİK
+         1. CİNSİYET SEÇİMİ
     ========================== -->
 
-    <main class="container">
+    <section id="genderPage">
 
-
-        <div
-            class="question-number"
-            id="questionNumber"
-        >
-            SORU 1 / 6
-        </div>
-
-
-        <h1 id="question">
-
-            Selamlar. Otoyolda 269 km Hızla Gidiyorsun Çünkü Sen Bir Malsın Ve Önüne Bir Kedi Çıkıyor Sağ Şerittede Bir Tane Tavşan Var Hangi Şerite Geçerdin ? 🧐 Sivri zekalık yapıp iki şeridin ortasından gidemezsin amk 😇 
-
+        <h1>
+            Hoş Geldin 👋💖
         </h1>
 
+        <p class="subtitle">
+            Devam etmek için cinsiyetini seç.
+        </p>
 
-        <!-- =========================
-             CEVAP BUTONLARI
-        ========================== -->
-
-        <div
-            class="buttons"
-            id="buttons"
-        >
+        <div class="buttons">
 
             <button
-                class="yes"
-                onclick="answer(0)"
+                class="gender-button"
+                onclick="selectGender('Erkek')"
             >
-                Kedi
+                👨 Erkek
             </button>
 
 
             <button
-                class="no"
-                onclick="answer(1)"
+                class="gender-button"
+                onclick="selectGender('Kadın')"
             >
-                Tavşan
+                👩 Kadın
             </button>
 
         </div>
 
+    </section>
 
-        <!-- =========================
-             CEVAP
-        ========================== -->
 
-        <div id="result">
 
-            <div class="message-box">
+    <!-- =========================
+         2. HESAPLAYICI
+    ========================== -->
 
-                <div
-                    class="message"
-                    id="message"
-                ></div>
+    <section
+        id="calculatorPage"
+        class="calculator"
+    >
 
+        <h1>
+            Hesaplayıcı 📏
+        </h1>
+
+        <p class="subtitle">
+
+            Boy ve çevre bilgilerini girerek
+            yaklaşık kategori sonucunu görebilirsin.
+
+        </p>
+
+
+        <div class="input-group">
+
+            <label>
+                Boy (cm)
+            </label>
+
+            <input
+                type="number"
+                id="length"
+                placeholder="Örn: 15"
+                step="0.1"
+            >
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label>
+                Çevre (cm)
+            </label>
+
+            <input
+                type="number"
+                id="girth"
+                placeholder="Örn: 12"
+                step="0.1"
+            >
+
+        </div>
+
+
+
+        <button
+            class="calculate-button"
+            onclick="calculate()"
+        >
+            Hesapla ✨
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         3. SONUÇ
+    ========================== -->
+
+    <section id="result">
+
+        <div class="message-box">
+
+            <div
+                class="category"
+                id="category"
+            >
             </div>
 
 
-            <button
-                class="next-button"
-                id="nextButton"
-                onclick="nextQuestion()"
+            <div
+                class="message"
+                id="message"
             >
-                →
-            </button>
+            </div>
 
         </div>
 
 
-    </main>
+        <button
+            class="next-button"
+            onclick="showFinal()"
+        >
+            →
+        </button>
+
+    </section>
+
 
 
     <!-- =========================
-         MÜZİK BUTONU
+         4. FİNAL SAYFASI
     ========================== -->
 
-    <button
-        class="music-button"
-        id="musicButton"
-        onclick="toggleMusic()"
-        aria-label="Müziği aç veya kapat"
+    <section
+        id="finalPage"
+        class="final-page"
     >
-        🔇
-    </button>
 
+        <h1 id="finalTitle">
+            Sonucun ✨
+        </h1>
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
 
-    <script>
+        <div class="message-box">
 
+            <div
+                class="message"
+                id="finalMessage"
+            >
+            </div>
 
-        /* =========================
-           SORULAR
-        ========================== */
+        </div>
 
-        const questions = [
 
-            {
-                question:
-                    "Selamlar. Otoyolda 269 km Hızla Gidiyorsun Çünkü Sen Bir Malsın Ve Önüne Bir Kedi Çıkıyor Sağ Şerittede Bir Tane Tavşan Var Hangi Şerite Geçerdin ? 🧐 Sivri zekalık yapıp iki şeridin ortasından gidemezsin amk 😇 ",
+        <!--
+            BURAYA RESMİNİ EKLEYEBİLİRSİN
 
-                answers: [
-                    "Tebriklerrrr Diğer Şeritte Ölü Bir Kedi Var . Ama Seni Suçlamıyoruz Belki Tavşanları Daha Çok Seviyorsun amk 😊 ",
-                    " Tebriklerrr Diğer Şeritte Ölü Bir Tavşan Var . Ama Seni Suçlamıyoruz Belki Kedileri Daha Çok Seviyorsun amk 😊 "
-                ]
-            },
+            ÖRNEK:
 
+            <img
+                src="resim.jpg"
+                class="final-image"
+                style="display:block"
+            >
 
-            {
-                question:
-                    "Beni biraz özledin mi ? 🥺💗",
+        -->
 
-                answers: [
-                    "Awww bunu duymak güzeldi 🥹💖",
-                    "Yalan söylüyorsun gibi geldi bana 😝"
-                ]
-            },
+        <img
+            id="finalImage"
+            class="final-image"
+            src=""
+            alt=""
+        >
 
 
-            {
-                question:
-                    "Ben sence tatlı mıyım ? 😌💖",
+    </section>
 
-                answers: [
-                    "Bunu zaten biliyordum 😎💗",
-                    "Tamam tamam, bunu unutuyorum 😭"
-                ]
-            },
 
+</main>
 
-            {
-                question:
-                    "Benimle konuşmayı seviyor musun ? 🧐💞",
 
-                answers: [
-                    "İşte bunu duymak istiyordum 🥰",
-                    "Kalbim biraz kırıldı ama olsun 😭"
-                ]
-            },
 
+<!-- =========================
+     JAVASCRIPT
+========================== -->
 
-            {
-                question:
-                    "Sence beraber çok eğlenir miyiz ? 😝💖",
+<script>
 
-                answers: [
-                    "Kesinlikle! Kaçışın yok artık 😈💗",
-                    "Bence seni ikna etmem gerekecek 😏"
-                ]
-            },
 
+/* =========================
+   DEĞİŞKENLER
+========================== */
 
-            {
-                question:
-                    "Son bir soru...<br>Beni seviyor musun ? 👀💖",
+let selectedGender = "";
+let selectedCategory = "";
 
-                answers: [
-                    "Hehehe bunu ekran görüntüsü alıyorum 😝💖",
-                    "Ben yine de seni seviyorum 🥹💗"
-                ]
-            }
 
-        ];
+/* =========================
+   CİNSİYET SEÇİMİ
+========================== */
 
+function selectGender(gender) {
 
-        /* =========================
-           DEĞİŞKENLER
-        ========================== */
+    selectedGender = gender;
 
-        let currentQuestion = 0;
 
+    document
+        .getElementById("genderPage")
+        .style.display = "none";
 
-        const music =
-            document.getElementById(
-                "backgroundMusic"
-            );
 
+    document
+        .getElementById("calculatorPage")
+        .style.display = "block";
 
-        const musicButton =
-            document.getElementById(
-                "musicButton"
-            );
+}
 
 
-        let musicPlaying = false;
 
+/* =========================
+   HESAPLAMA
+========================== */
 
-        /* =========================
-           MÜZİĞİ BAŞLAT
-        ========================== */
+function calculate() {
 
-        function startMusic() {
 
-            music.volume = 0.35;
+    const length = parseFloat(
 
+        document
+            .getElementById("length")
+            .value
 
-            music.play()
-                .then(() => {
+    );
 
-                    musicPlaying = true;
 
-                    musicButton.textContent =
-                        "🔊";
+    const girth = parseFloat(
 
-                })
-                .catch(() => {
+        document
+            .getElementById("girth")
+            .value
 
-                    /*
-                     Tarayıcı otomatik
-                     oynatmayı engellerse
-                     ilk dokunuşta başlayacak.
-                    */
+    );
 
-                    musicPlaying = false;
 
-                    musicButton.textContent =
-                        "🔇";
+    /* =========================
+       BOŞ ALAN KONTROLÜ
+    ========================== */
 
-                });
+    if (
+        isNaN(length) ||
+        isNaN(girth)
+    ) {
 
-        }
+        alert(
+            "Lütfen bütün bilgileri gir 😄"
+        );
 
+        return;
 
-        /* =========================
-           MÜZİK AÇ / KAPAT
-        ========================== */
+    }
 
-        function toggleMusic() {
 
-            if (music.paused) {
 
-                music.volume = 0.35;
+    /* =========================
+       KATEGORİ BELİRLEME
 
-                music.play()
-                    .then(() => {
+       BURADAKİ SAYILARI
+       İSTEDİĞİN GİBİ
+       DEĞİŞTİREBİLİRSİN
+    ========================== */
 
-                        musicPlaying = true;
 
-                        musicButton.textContent =
-                            "🔊";
+    let score = length + (girth * 0.5);
 
-                    })
-                    .catch(() => {
 
-                        musicPlaying = false;
 
-                        musicButton.textContent =
-                            "🔇";
+    if (score < 10) {
 
-                    });
+        selectedCategory = "Çok Küçük";
 
-            } else {
+    }
 
-                music.pause();
 
-                musicPlaying = false;
+    else if (score < 14) {
 
-                musicButton.textContent =
-                    "🔇";
+        selectedCategory = "Küçük";
 
-            }
+    }
 
-        }
 
+    else if (score < 18) {
 
-        /* =========================
-           İLK DOKUNUŞTA MÜZİĞİ BAŞLAT
-        ========================== */
+        selectedCategory = "Ortalama";
 
-        function firstInteraction() {
+    }
 
-            if (!musicPlaying) {
 
-                startMusic();
+    else if (score < 22) {
 
-            }
+        selectedCategory = "Büyük";
 
-            document.removeEventListener(
-                "touchstart",
-                firstInteraction
-            );
+    }
 
-            document.removeEventListener(
-                "click",
-                firstInteraction
-            );
 
-        }
+    else {
 
+        selectedCategory = "Mega";
 
-        document.addEventListener(
-            "touchstart",
-            firstInteraction,
-            {
-                once: true
-            }
+    }
+
+
+
+    /* =========================
+       SONUÇ MESAJLARI
+    ========================== */
+
+
+    const messages = {
+
+
+        "Çok Küçük":
+
+        "Sonucun Çok Küçük kategorisinde görünüyor. Bu bölümde daha sonra istediğin özel açıklamayı yazabilirsin.",
+
+
+
+        "Küçük":
+
+        "Sonucun Küçük kategorisinde görünüyor. Buraya daha sonra Küçük kategorisine özel yazını ekleyebilirsin.",
+
+
+
+        "Ortalama":
+
+        "Sonucun Ortalama kategorisinde görünüyor. Genel değerlendirme metnini buradan değiştirebilirsin.",
+
+
+
+        "Büyük":
+
+        "Sonucun Büyük kategorisinde görünüyor. Buraya Büyük kategorisine özel eğlenceli bir açıklama ekleyebilirsin 😄",
+
+
+
+        "Mega":
+
+        "Sonucun Mega kategorisinde görünüyor. Bu kategori için daha sonra istediğin özel mesajı yazabilirsin 😎✨"
+
+    };
+
+
+
+    /* =========================
+       YÜZDELİK GÖRÜNÜMÜ
+    ========================== */
+
+    const percentages = {
+
+        "Çok Küçük": "%3",
+
+        "Küçük": "%15",
+
+        "Ortalama": "%50",
+
+        "Büyük": "%25",
+
+        "Mega": "%7"
+
+    };
+
+
+
+    document
+        .getElementById("category")
+        .textContent =
+        selectedCategory;
+
+
+
+    document
+        .getElementById("message")
+        .textContent =
+
+        "Dünya ortalamasına göre yaklaşık " +
+
+        percentages[selectedCategory] +
+
+        " dilimindesin. " +
+
+        messages[selectedCategory];
+
+
+
+    /* =========================
+       HESAPLAYICI GİZLE
+    ========================== */
+
+
+    document
+        .getElementById("calculatorPage")
+        .style.display = "none";
+
+
+
+    /* =========================
+       SONUCU GÖSTER
+    ========================== */
+
+
+    document
+        .getElementById("result")
+        .style.display = "block";
+
+
+}
+
+
+
+/* =========================
+   FİNAL SAYFASI
+========================== */
+
+function showFinal() {
+
+
+    document
+        .getElementById("result")
+        .style.display = "none";
+
+
+    document
+        .getElementById("finalPage")
+        .style.display = "block";
+
+
+
+    /* =========================
+       HER KATEGORİYE ÖZEL
+       FİNAL YAZILARI
+    ========================== */
+
+
+    const finalTexts = {
+
+
+        "Çok Küçük":
+
+        "Çok Küçük kategorisi için özel mesaj buraya gelecek. Bu alanı daha sonra tamamen istediğin şekilde değiştirebiliriz.",
+
+
+
+        "Küçük":
+
+        "Küçük kategorisi için özel mesaj buraya gelecek. Buraya istediğin açıklamayı veya eğlenceli yazıyı ekleyebilirsin 😄",
+
+
+
+        "Ortalama":
+
+        "Ortalama kategorisi için özel mesaj buraya gelecek. Bu bölüm tamamen sana göre düzenlenebilir ✨",
+
+
+
+        "Büyük":
+
+        "Büyük kategorisi için özel mesaj buraya gelecek. İstersen buraya daha uzun ve detaylı bir açıklama koyabiliriz 😎",
+
+
+
+        "Mega":
+
+        "Mega kategorisi için özel mesaj buraya gelecek. Bu alanı da istediğin şekilde özelleştirebiliriz 🚀✨"
+
+    };
+
+
+
+    document
+        .getElementById("finalTitle")
+        .textContent =
+
+        selectedCategory +
+
+        " Sonucun ✨";
+
+
+
+    document
+        .getElementById("finalMessage")
+        .textContent =
+
+        finalTexts[selectedCategory];
+
+
+
+    /* =========================
+       RESİM EKLEME
+
+       HER KATEGORİYE FARKLI
+       RESİM KOYABİLİRSİN
+    ========================== */
+
+
+    const images = {
+
+
+        "Çok Küçük": "",
+
+        "Küçük": "",
+
+        "Ortalama": "",
+
+        "Büyük": "",
+
+        "Mega": ""
+
+    };
+
+
+
+    const image =
+
+        document.getElementById(
+            "finalImage"
         );
 
 
-        document.addEventListener(
-            "click",
-            firstInteraction,
-            {
-                once: true
-            }
-        );
 
+    if (images[selectedCategory] !== "") {
 
-        /*
-         Sayfa açılır açılmaz
-         müziği başlatmayı dene.
-        */
+        image.src =
+            images[selectedCategory];
 
-        window.addEventListener(
-            "load",
-            () => {
+        image.style.display =
+            "block";
 
-                startMusic();
+    }
 
-            }
-        );
 
+}
 
-        /* =========================
-           CEVAP SEÇİMİ
-        ========================== */
 
-        function answer(choice) {
-
-            const result =
-                document.getElementById(
-                    "result"
-                );
-
-
-            const message =
-                document.getElementById(
-                    "message"
-                );
-
-
-            const buttons =
-                document.getElementById(
-                    "buttons"
-                );
-
-
-            message.textContent =
-                questions[
-                    currentQuestion
-                ].answers[choice];
-
-
-            buttons.style.display =
-                "none";
-
-
-            result.style.display =
-                "block";
-
-
-            const nextButton =
-                document.getElementById(
-                    "nextButton"
-                );
-
-
-            if (
-                currentQuestion ===
-                questions.length - 1
-            ) {
-
-                nextButton.textContent =
-                    "💖";
-
-            } else {
-
-                nextButton.textContent =
-                    "→";
-
-            }
-
-
-            setTimeout(() => {
-
-                result.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-
-            }, 100);
-
-        }
-
-
-        /* =========================
-           SONRAKİ SORU
-        ========================== */
-
-        function nextQuestion() {
-
-            if (
-                currentQuestion ===
-                questions.length - 1
-            ) {
-
-                showFinal();
-
-                return;
-
-            }
-
-
-            currentQuestion++;
-
-
-            document.getElementById(
-                "question"
-            ).innerHTML =
-                questions[
-                    currentQuestion
-                ].question;
-
-
-            document.getElementById(
-                "questionNumber"
-            ).textContent =
-                "SORU " +
-                (currentQuestion + 1) +
-                " / 6";
-
-
-            document.getElementById(
-                "buttons"
-            ).style.display =
-                "flex";
-
-
-            document.getElementById(
-                "result"
-            ).style.display =
-                "none";
-
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        }
-
-
-        /* =========================
-           FİNAL
-        ========================== */
-
-        function showFinal() {
-
-            const question =
-                document.getElementById(
-                    "question"
-                );
-
-
-            const questionNumber =
-                document.getElementById(
-                    "questionNumber"
-                );
-
-
-            const buttons =
-                document.getElementById(
-                    "buttons"
-                );
-
-
-            const result =
-                document.getElementById(
-                    "result"
-                );
-
-
-            const message =
-                document.getElementById(
-                    "message"
-                );
-
-
-            questionNumber.textContent =
-                "SON 💖";
-
-
-            question.innerHTML =
-                "Sorgu Tamamlandı 😝💗";
-
-
-            buttons.style.display =
-                "none";
-
-
-            message.textContent =
-                "Hehehe bütün soruları cevapladın 💖 Artık kaçış yok 😝🥰";
-
-
-            result.style.display =
-                "block";
-
-
-            document.getElementById(
-                "nextButton"
-            ).style.display =
-                "none";
-
-        }
-
-    </script>
+</script>
 
 
 </body>
-
 </html>
+En önemli değiştireceğin yerler 😄
+1. Kategori sınırları:
+if (score < 10)
+else if (score < 14)
+else if (score < 18)
+else if (score < 22)
+else
+2. İlk sonuçta çıkan yazılar:
+const messages = {
+bölümü.
+3. Ok butonuna basınca açılan son sayfadaki özel yazılar:
+const finalTexts = {
+bölümü.
+4. Her kategoriye farklı resim eklemek için:
+const images = {
+    "Çok Küçük": "resim1.jpg",
+    "Küçük": "resim2.jpg",
+    "Ortalama": "resim3.jpg",
+    "Büyük": "resim4.jpg",
+    "Mega": "resim5.jpg"
+};
+İstersen bir sonraki adımda bunu daha da profesyonel hale getirip, �⁠sayfalar arası geçiş animasyonu, �⁠ilerleme göstergesi ve sonuç için daha şık bir yüzdelik/progress bar tasarımı da ekleyebilirim 😄
