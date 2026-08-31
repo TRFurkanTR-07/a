@@ -11,15 +11,16 @@
     content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 >
 
-<title>Boyut Hesaplayıcı</title>
+<title>Vücut Ölçü Hesaplayıcı 💖</title>
 
 <style>
 
 @import url('https://fonts.cdnfonts.com/css/limon-milk');
 
-/* =========================
-   TEMEL
-========================= */
+
+/* =====================================================
+   TEMEL AYARLAR
+===================================================== */
 
 * {
     margin: 0;
@@ -72,9 +73,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    ANA KUTU
-========================= */
+===================================================== */
 
 .container {
 
@@ -86,17 +87,15 @@ body {
     text-align: center;
 
     background:
-        rgba(255,255,255,0.07);
+        rgba(255, 255, 255, 0.07);
 
     border:
-        1px solid
-        rgba(255,255,255,0.14);
+        1px solid rgba(255, 255, 255, 0.14);
 
     border-radius: 30px;
 
     box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.35);
+        0 15px 40px rgba(0, 0, 0, 0.35);
 
     animation:
         containerIn 0.6s ease;
@@ -130,9 +129,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    BAŞLIK
-========================= */
+===================================================== */
 
 h1 {
 
@@ -155,12 +154,13 @@ h1 {
             180,
             0.55
         );
+
 }
 
 
-/* =========================
+/* =====================================================
    AÇIKLAMA
-========================= */
+===================================================== */
 
 .subtitle {
 
@@ -177,12 +177,13 @@ h1 {
         );
 
     margin-bottom: 30px;
+
 }
 
 
-/* =========================
+/* =====================================================
    BUTONLAR
-========================= */
+===================================================== */
 
 .buttons {
 
@@ -195,6 +196,7 @@ h1 {
     gap: 18px;
 
     flex-wrap: wrap;
+
 }
 
 
@@ -224,12 +226,14 @@ button {
 
     -webkit-tap-highlight-color:
         transparent;
+
 }
 
 
 .gender-button {
 
     background:
+
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -237,6 +241,7 @@ button {
         );
 
     box-shadow:
+
         0 8px 22px
         rgba(
             255,
@@ -244,12 +249,13 @@ button {
             163,
             0.30
         );
+
 }
 
 
-/* =========================
+/* =====================================================
    HESAPLAYICI
-========================= */
+===================================================== */
 
 .calculator {
 
@@ -257,6 +263,7 @@ button {
 
     animation:
         resultIn 0.5s ease;
+
 }
 
 
@@ -265,6 +272,7 @@ button {
     margin-bottom: 18px;
 
     text-align: left;
+
 }
 
 
@@ -283,6 +291,7 @@ label {
             255,
             0.80
         );
+
 }
 
 
@@ -295,6 +304,7 @@ input {
     border-radius: 999px;
 
     border:
+
         1px solid
         rgba(
             255,
@@ -304,6 +314,7 @@ input {
         );
 
     background:
+
         rgba(
             255,
             255,
@@ -318,12 +329,14 @@ input {
     font-size: 16px;
 
     outline: none;
+
 }
 
 
 input:focus {
 
     border-color:
+
         rgba(
             255,
             79,
@@ -332,6 +345,7 @@ input:focus {
         );
 
     box-shadow:
+
         0 0 18px
         rgba(
             255,
@@ -339,6 +353,7 @@ input:focus {
             163,
             0.25
         );
+
 }
 
 
@@ -351,6 +366,7 @@ input::placeholder {
             255,
             0.35
         );
+
 }
 
 
@@ -359,6 +375,7 @@ input::placeholder {
     margin-top: 15px;
 
     background:
+
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -366,6 +383,7 @@ input::placeholder {
         );
 
     box-shadow:
+
         0 8px 22px
         rgba(
             255,
@@ -373,12 +391,13 @@ input::placeholder {
             163,
             0.30
         );
+
 }
 
 
-/* =========================
+/* =====================================================
    SONUÇ
-========================= */
+===================================================== */
 
 #result {
 
@@ -388,6 +407,7 @@ input::placeholder {
 
     animation:
         resultIn 0.4s ease;
+
 }
 
 
@@ -412,6 +432,7 @@ input::placeholder {
             translateY(0);
 
     }
+
 }
 
 
@@ -422,6 +443,7 @@ input::placeholder {
     border-radius: 22px;
 
     background:
+
         rgba(
             255,
             255,
@@ -430,6 +452,7 @@ input::placeholder {
         );
 
     border:
+
         1px solid
         rgba(
             255,
@@ -439,6 +462,7 @@ input::placeholder {
         );
 
     box-shadow:
+
         0 10px 30px
         rgba(
             0,
@@ -446,6 +470,7 @@ input::placeholder {
             0,
             0.25
         );
+
 }
 
 
@@ -456,16 +481,18 @@ input::placeholder {
     margin-bottom: 12px;
 
     color: #ff79bd;
+
 }
 
 
 .percentile {
 
-    font-size: 22px;
+    font-size: 21px;
 
     font-weight: bold;
 
     margin-bottom: 18px;
+
 }
 
 
@@ -473,7 +500,7 @@ input::placeholder {
 
     font-size: 14px;
 
-    line-height: 1.7;
+    line-height: 1.8;
 
     margin-bottom: 15px;
 
@@ -484,6 +511,7 @@ input::placeholder {
             255,
             0.75
         );
+
 }
 
 
@@ -500,12 +528,13 @@ input::placeholder {
             255,
             0.90
         );
+
 }
 
 
-/* =========================
-   SONRAKİ BUTON
-========================= */
+/* =====================================================
+   OK BUTONU
+===================================================== */
 
 .next-button {
 
@@ -528,6 +557,7 @@ input::placeholder {
     border-radius: 50%;
 
     background:
+
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -535,6 +565,7 @@ input::placeholder {
         );
 
     box-shadow:
+
         0 7px 20px
         rgba(
             255,
@@ -544,12 +575,13 @@ input::placeholder {
         );
 
     font-size: 25px;
+
 }
 
 
-/* =========================
+/* =====================================================
    FİNAL
-========================= */
+===================================================== */
 
 .final-page {
 
@@ -557,6 +589,7 @@ input::placeholder {
 
     animation:
         resultIn 0.5s ease;
+
 }
 
 
@@ -571,12 +604,47 @@ input::placeholder {
     border-radius: 25px;
 
     display: none;
+
 }
 
 
-/* =========================
+/* =====================================================
+   GERİ BUTONU
+===================================================== */
+
+.back-button {
+
+    margin-top: 20px;
+
+    min-width: 120px;
+
+    padding: 11px 22px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.16
+        );
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
    KALPLER
-========================= */
+===================================================== */
 
 .heart {
 
@@ -594,6 +662,7 @@ input::placeholder {
         heartRise 9s linear infinite;
 
     z-index: 1;
+
 }
 
 
@@ -610,11 +679,15 @@ input::placeholder {
     }
 
     15% {
+
         opacity: 0.35;
+
     }
 
     85% {
+
         opacity: 0.25;
+
     }
 
     100% {
@@ -626,12 +699,13 @@ input::placeholder {
         opacity: 0;
 
     }
+
 }
 
 
-/* =========================
+/* =====================================================
    HOVER
-========================= */
+===================================================== */
 
 @media (hover: hover) {
 
@@ -654,9 +728,9 @@ button:active {
 }
 
 
-/* =========================
+/* =====================================================
    MOBİL
-========================= */
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -665,6 +739,7 @@ button:active {
         padding: 15px;
 
     }
+
 
     .container {
 
@@ -676,6 +751,7 @@ button:active {
 
     }
 
+
     h1 {
 
         font-size:
@@ -686,6 +762,7 @@ button:active {
             );
 
     }
+
 
     button {
 
@@ -703,9 +780,9 @@ button:active {
 }
 
 
-/* =========================
-   HAREKET
-========================= */
+/* =====================================================
+   HAREKET AZALTMA
+===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -729,9 +806,9 @@ button:active {
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      KALPLER
-========================= -->
+===================================================== -->
 
 <div
     class="heart"
@@ -763,16 +840,16 @@ button:active {
 
 
 
-<!-- =========================
+<!-- =====================================================
      ANA KUTU
-========================= -->
+===================================================== -->
 
 <main class="container">
 
 
-<!-- =========================
-     CİNSİYET SEÇİMİ
-========================= -->
+<!-- =====================================================
+     1 — CİNSİYET SEÇİMİ
+===================================================== -->
 
 <section id="genderPage">
 
@@ -780,9 +857,10 @@ button:active {
         Hoş Geldin 👋💖
     </h1>
 
+
     <p class="subtitle">
 
-        Hesaplamaya devam etmek için
+        Devam etmek için
         cinsiyetini seç.
 
     </p>
@@ -792,7 +870,7 @@ button:active {
 
         <button
             class="gender-button"
-            onclick="selectGender('Erkek')"
+            onclick="selectGender('male')"
         >
             👨 Erkek
         </button>
@@ -800,7 +878,7 @@ button:active {
 
         <button
             class="gender-button"
-            onclick="selectGender('Kadın')"
+            onclick="selectGender('female')"
         >
             👩 Kadın
         </button>
@@ -811,12 +889,12 @@ button:active {
 
 
 
-<!-- =========================
-     HESAPLAYICI
-========================= -->
+<!-- =====================================================
+     2 — ERKEK HESAPLAYICI
+===================================================== -->
 
 <section
-    id="calculatorPage"
+    id="maleCalculatorPage"
     class="calculator"
 >
 
@@ -829,9 +907,9 @@ button:active {
 
         Sertleşmiş uzunluğunu ve çevresini
         santimetre olarak gir.
-        Sonuç, klinik ölçümlere dayalı
-        yaklaşık bir persentil olarak
-        hesaplanır.
+        Sonucun, yayımlanmış klinik ölçümlere
+        dayalı yaklaşık bir persentil olarak
+        hesaplanacaktır.
 
     </p>
 
@@ -839,8 +917,11 @@ button:active {
     <div class="input-group">
 
         <label for="length">
+
             Sertleşmiş uzunluk (cm)
+
         </label>
+
 
         <input
             type="text"
@@ -855,8 +936,11 @@ button:active {
     <div class="input-group">
 
         <label for="girth">
+
             Sertleşmiş çevre (cm)
+
         </label>
+
 
         <input
             type="text"
@@ -870,22 +954,111 @@ button:active {
 
     <button
         class="calculate-button"
-        onclick="calculate()"
+        onclick="calculateMale()"
     >
         Hesapla ✨
+    </button>
+
+
+    <button
+        class="back-button"
+        onclick="goBackToGender()"
+    >
+        ← Geri
     </button>
 
 </section>
 
 
 
-<!-- =========================
-     SONUÇ
-========================= -->
+<!-- =====================================================
+     3 — KADIN HESAPLAYICI
+===================================================== -->
+
+<section
+    id="femaleCalculatorPage"
+    class="calculator"
+>
+
+    <h1>
+        Meme Boyutu Hesaplayıcı 💖
+    </h1>
+
+
+    <p class="subtitle">
+
+        Göğüs altı çevreni ve göğsünün
+        en dolgun yerindeki çevreyi
+        santimetre olarak gir.
+
+    </p>
+
+
+    <div class="input-group">
+
+        <label for="underBust">
+
+            Göğüs altı çevresi (cm)
+
+        </label>
+
+
+        <input
+            type="text"
+            inputmode="decimal"
+            id="underBust"
+            placeholder="Örn: 75"
+        >
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="bust">
+
+            Göğüs çevresi (cm)
+
+        </label>
+
+
+        <input
+            type="text"
+            inputmode="decimal"
+            id="bust"
+            placeholder="Örn: 90"
+        >
+
+    </div>
+
+
+    <button
+        class="calculate-button"
+        onclick="calculateFemale()"
+    >
+        Hesapla ✨
+    </button>
+
+
+    <button
+        class="back-button"
+        onclick="goBackToGender()"
+    >
+        ← Geri
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     4 — SONUÇ
+===================================================== -->
 
 <section id="result">
 
     <div class="message-box">
+
 
         <div
             class="category"
@@ -924,9 +1097,9 @@ button:active {
 
 
 
-<!-- =========================
-     FİNAL
-========================= -->
+<!-- =====================================================
+     5 — FİNAL
+===================================================== -->
 
 <section
     id="finalPage"
@@ -948,22 +1121,26 @@ button:active {
     </div>
 
 
-    <!--
-        BURAYA RESİM GELECEK.
+    <!-- =================================================
+         RESİM
 
-        Örneğin:
-
-        "images/buyuk.jpg"
-
-        şeklinde aşağıdaki JavaScript
-        bölümüne yazabilirsin.
-    -->
+         JavaScript'teki images bölümünden
+         kategoriye göre resim ekleyebilirsin.
+    ================================================== -->
 
     <img
         id="finalImage"
         class="final-image"
         alt="Sonuç görseli"
     >
+
+
+    <button
+        class="back-button"
+        onclick="restart()"
+    >
+        Baştan Başla
+    </button>
 
 </section>
 
@@ -976,7 +1153,7 @@ button:active {
 
 
 /* =====================================================
-   DEĞİŞKENLER
+   GLOBAL DEĞİŞKENLER
 ===================================================== */
 
 let selectedGender = "";
@@ -985,7 +1162,34 @@ let selectedCategory = "";
 
 
 /* =====================================================
-   CİNSİYET
+   TÜRKÇE SAYI OKUMA
+
+   13,5 → 13.5
+   13.5 → 13.5
+===================================================== */
+
+function parseNumber(value) {
+
+    if (!value) {
+
+        return NaN;
+
+    }
+
+
+    return Number(
+
+        value
+            .trim()
+            .replace(",", ".")
+
+    );
+
+}
+
+
+/* =====================================================
+   CİNSİYET SEÇ
 ===================================================== */
 
 function selectGender(gender) {
@@ -999,32 +1203,47 @@ function selectGender(gender) {
 
 
     document
-        .getElementById("calculatorPage")
-        .style.display = "block";
-
-}
+        .getElementById("result")
+        .style.display = "none";
 
 
-/* =====================================================
-   TÜRKÇE / İNGİLİZCE SAYI OKUMA
+    document
+        .getElementById("finalPage")
+        .style.display = "none";
 
-   13,5  -> 13.5
-   13.5  -> 13.5
-===================================================== */
 
-function parseNumber(value) {
+    if (gender === "male") {
 
-    if (!value) {
-        return NaN;
+        document
+            .getElementById("femaleCalculatorPage")
+            .style.display = "none";
+
+
+        document
+            .getElementById("maleCalculatorPage")
+            .style.display = "block";
+
     }
 
 
-    value = value
-        .trim()
-        .replace(",", ".");
+    else {
+
+        document
+            .getElementById("maleCalculatorPage")
+            .style.display = "none";
 
 
-    return Number(value);
+        document
+            .getElementById("femaleCalculatorPage")
+            .style.display = "block";
+
+    }
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
 
@@ -1037,6 +1256,7 @@ function erf(x) {
 
     const sign =
         x >= 0 ? 1 : -1;
+
 
     x = Math.abs(x);
 
@@ -1097,9 +1317,7 @@ function erf(x) {
 
 
 /* =====================================================
-   NORMAL DISTRIBUTION
-
-   Z değerinden yüzdelik hesaplar.
+   NORMAL DAĞILIM
 ===================================================== */
 
 function normalCDF(z) {
@@ -1119,73 +1337,7 @@ function normalCDF(z) {
 
 
 /* =====================================================
-   UZUNLUK PERCENTILE
-
-   Ortalama: 13.12 cm
-   SD: 1.66 cm
-
-   Veale et al. 2015
-===================================================== */
-
-function getLengthPercentile(length) {
-
-    const mean =
-        13.12;
-
-    const sd =
-        1.66;
-
-
-    const z =
-        (
-            length -
-            mean
-        ) / sd;
-
-
-    return (
-        normalCDF(z) *
-        100
-    );
-
-}
-
-
-/* =====================================================
-   ÇEVRE PERCENTILE
-
-   Ortalama: 11.66 cm
-   SD: 1.10 cm
-
-   Veale et al. 2015
-===================================================== */
-
-function getGirthPercentile(girth) {
-
-    const mean =
-        11.66;
-
-    const sd =
-        1.10;
-
-
-    const z =
-        (
-            girth -
-            mean
-        ) / sd;
-
-
-    return (
-        normalCDF(z) *
-        100
-    );
-
-}
-
-
-/* =====================================================
-   SINIRLA
+   PERCENTILE SINIRLAMA
 ===================================================== */
 
 function clampPercentile(value) {
@@ -1202,10 +1354,74 @@ function clampPercentile(value) {
 
 
 /* =====================================================
-   KATEGORİ
+   ERKEK — UZUNLUK PERCENTILE
+
+   Veale et al. 2015
+
+   Ortalama: 13.12 cm
+   SD:       1.66 cm
 ===================================================== */
 
-function getCategory(percentile) {
+function getLengthPercentile(length) {
+
+    const mean = 13.12;
+
+    const sd = 1.66;
+
+
+    const z =
+        (
+            length -
+            mean
+        ) / sd;
+
+
+    return clampPercentile(
+
+        normalCDF(z) * 100
+
+    );
+
+}
+
+
+/* =====================================================
+   ERKEK — ÇEVRE PERCENTILE
+
+   Veale et al. 2015
+
+   Ortalama: 11.66 cm
+   SD:       1.10 cm
+===================================================== */
+
+function getGirthPercentile(girth) {
+
+    const mean = 11.66;
+
+    const sd = 1.10;
+
+
+    const z =
+        (
+            girth -
+            mean
+        ) / sd;
+
+
+    return clampPercentile(
+
+        normalCDF(z) * 100
+
+    );
+
+}
+
+
+/* =====================================================
+   ERKEK KATEGORİSİ
+===================================================== */
+
+function getMaleCategory(percentile) {
 
     if (percentile < 5) {
 
@@ -1213,11 +1429,13 @@ function getCategory(percentile) {
 
     }
 
+
     if (percentile < 25) {
 
         return "Küçük";
 
     }
+
 
     if (percentile < 75) {
 
@@ -1225,11 +1443,13 @@ function getCategory(percentile) {
 
     }
 
+
     if (percentile < 95) {
 
         return "Büyük";
 
     }
+
 
     return "Mega";
 
@@ -1237,15 +1457,11 @@ function getCategory(percentile) {
 
 
 /* =====================================================
-   HESAPLA
+   ERKEK HESAPLAMA
 ===================================================== */
 
-function calculate() {
+function calculateMale() {
 
-
-    /* ---------------------------------
-       DEĞERLERİ AL
-    --------------------------------- */
 
     const length =
         parseNumber(
@@ -1262,10 +1478,6 @@ function calculate() {
                 .value
         );
 
-
-    /* ---------------------------------
-       KONTROL
-    --------------------------------- */
 
     if (
         !Number.isFinite(length) ||
@@ -1287,7 +1499,7 @@ function calculate() {
     ) {
 
         alert(
-            "Lütfen 0'dan büyük geçerli ölçüler gir."
+            "Lütfen geçerli ölçüler gir."
         );
 
         return;
@@ -1295,33 +1507,22 @@ function calculate() {
     }
 
 
-    /* ---------------------------------
-       GERÇEK HESAPLAMA
-    --------------------------------- */
-
+    /* -----------------------------------------------
+       PERCENTILE
+    ------------------------------------------------ */
 
     const lengthPercentile =
-        clampPercentile(
-            getLengthPercentile(
-                length
-            )
-        );
+        getLengthPercentile(length);
 
 
     const girthPercentile =
-        clampPercentile(
-            getGirthPercentile(
-                girth
-            )
-        );
+        getGirthPercentile(girth);
 
 
-    /* ---------------------------------
-       İKİ PERCENTILE'I BİRLEŞTİR
-
-       %50 uzunluk
-       %50 çevre
-    --------------------------------- */
+    /*
+       İki ölçümü eşit ağırlıkla
+       yaklaşık genel percentile'e dönüştürüyoruz.
+    */
 
     const overallPercentile =
         (
@@ -1330,43 +1531,39 @@ function calculate() {
         ) / 2;
 
 
-    /* ---------------------------------
-       KATEGORİ
-    --------------------------------- */
-
     selectedCategory =
-        getCategory(
+        getMaleCategory(
             overallPercentile
         );
 
 
-    /* ---------------------------------
-       MESAJ
-    --------------------------------- */
+    /* -----------------------------------------------
+       MESAJLAR
+    ------------------------------------------------ */
 
     const messages = {
 
         "Çok Küçük":
-            "Ölçümünüz referans dağılımın en alt yüzdeliklerinde bulunuyor.",
+            "Ölçümünüz kullanılan klinik referans dağılımının en alt yüzdeliklerinde bulunuyor.",
 
         "Küçük":
-            "Ölçümünüz referans dağılımın ortalamanın altında kalan bölümünde bulunuyor.",
+            "Ölçümünüz kullanılan klinik referans dağılımının ortalamanın altında kalan bölümünde bulunuyor.",
 
         "Ortalama":
-            "Ölçümünüz referans dağılımın orta bölümünde bulunuyor.",
+            "Ölçümünüz kullanılan klinik referans dağılımının orta bölümünde bulunuyor.",
 
         "Büyük":
-            "Ölçümünüz referans dağılımın üst bölümünde bulunuyor.",
+            "Ölçümünüz kullanılan klinik referans dağılımının üst bölümünde bulunuyor.",
 
         "Mega":
-            "Ölçümünüz referans dağılımın en üst yüzdeliklerinde bulunuyor."
+            "Ölçümünüz kullanılan klinik referans dağılımının en üst yüzdeliklerinde bulunuyor."
 
     };
 
 
-    /* ---------------------------------
+    /* -----------------------------------------------
        EKRANA YAZ
-    --------------------------------- */
+    ------------------------------------------------ */
 
     document
         .getElementById("category")
@@ -1402,20 +1599,239 @@ function calculate() {
         messages[selectedCategory];
 
 
-    /* ---------------------------------
-       SAYFALARI DEĞİŞTİR
-    --------------------------------- */
+    /* -----------------------------------------------
+       SAYFA DEĞİŞTİR
+    ------------------------------------------------ */
 
     document
-        .getElementById("calculatorPage")
-        .style.display =
-        "none";
+        .getElementById("maleCalculatorPage")
+        .style.display = "none";
 
 
     document
         .getElementById("result")
-        .style.display =
-        "block";
+        .style.display = "block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =====================================================
+   KADIN KATEGORİSİ
+
+   Burada "cup" iddiası yerine
+   ölçü farkına göre 5 kategori kullanıyoruz.
+
+   fark = göğüs çevresi - göğüs altı çevresi
+===================================================== */
+
+function getFemaleCategory(difference) {
+
+    if (difference < 7) {
+
+        return "Çok Küçük";
+
+    }
+
+
+    if (difference < 12) {
+
+        return "Küçük";
+
+    }
+
+
+    if (difference < 18) {
+
+        return "Ortalama";
+
+    }
+
+
+    if (difference < 24) {
+
+        return "Büyük";
+
+    }
+
+
+    return "Mega";
+
+}
+
+
+/* =====================================================
+   KADIN HESAPLAMA
+===================================================== */
+
+function calculateFemale() {
+
+
+    const underBust =
+        parseNumber(
+            document
+                .getElementById("underBust")
+                .value
+        );
+
+
+    const bust =
+        parseNumber(
+            document
+                .getElementById("bust")
+                .value
+        );
+
+
+    /* -----------------------------------------------
+       KONTROL
+    ------------------------------------------------ */
+
+    if (
+        !Number.isFinite(underBust) ||
+        !Number.isFinite(bust)
+    ) {
+
+        alert(
+            "Lütfen göğüs altı ve göğüs çevresi ölçülerini gir."
+        );
+
+        return;
+
+    }
+
+
+    if (
+        underBust <= 0 ||
+        bust <= 0
+    ) {
+
+        alert(
+            "Lütfen geçerli ölçüler gir."
+        );
+
+        return;
+
+    }
+
+
+    if (bust <= underBust) {
+
+        alert(
+            "Göğüs çevresi, göğüs altı çevresinden büyük olmalıdır."
+        );
+
+        return;
+
+    }
+
+
+    /* -----------------------------------------------
+       FARK
+    ------------------------------------------------ */
+
+    const difference =
+        bust -
+        underBust;
+
+
+    /* -----------------------------------------------
+       KATEGORİ
+    ------------------------------------------------ */
+
+    selectedCategory =
+        getFemaleCategory(
+            difference
+        );
+
+
+    /* -----------------------------------------------
+       KADIN MESAJLARI
+    ------------------------------------------------ */
+
+    const femaleMessages = {
+
+        "Çok Küçük":
+            "Ölçü farkınız bu hesaplayıcının kullandığı en düşük kategori aralığında bulunuyor.",
+
+        "Küçük":
+            "Ölçü farkınız bu hesaplayıcının küçük kategori aralığında bulunuyor.",
+
+        "Ortalama":
+            "Ölçü farkınız orta kategori aralığında bulunuyor.",
+
+        "Büyük":
+            "Ölçü farkınız yüksek kategori aralığında bulunuyor.",
+
+        "Mega":
+            "Ölçü farkınız bu hesaplayıcının en yüksek kategori aralığında bulunuyor."
+
+    };
+
+
+    /* -----------------------------------------------
+       EKRANA YAZ
+    ------------------------------------------------ */
+
+    document
+        .getElementById("category")
+        .textContent =
+        selectedCategory;
+
+
+    /*
+       Kadın tarafında sahte bir
+       "dünya yüzdeliği" göstermiyoruz.
+    */
+
+    document
+        .getElementById("percentile")
+        .textContent =
+        "Ölçü farkı: " +
+        difference.toFixed(1) +
+        " cm";
+
+
+    document
+        .getElementById("detail")
+        .innerHTML =
+
+        "Göğüs altı: <b>" +
+        underBust.toFixed(1) +
+        " cm</b><br>" +
+
+        "Göğüs çevresi: <b>" +
+        bust.toFixed(1) +
+        " cm</b><br>" +
+
+        "Aradaki fark: <b>" +
+        difference.toFixed(1) +
+        " cm</b>";
+
+
+    document
+        .getElementById("message")
+        .textContent =
+        femaleMessages[selectedCategory];
+
+
+    /* -----------------------------------------------
+       SAYFA DEĞİŞTİR
+    ------------------------------------------------ */
+
+    document
+        .getElementById("femaleCalculatorPage")
+        .style.display = "none";
+
+
+    document
+        .getElementById("result")
+        .style.display = "block";
 
 
     window.scrollTo({
@@ -1435,77 +1851,162 @@ function showFinal() {
 
     document
         .getElementById("result")
-        .style.display =
-        "none";
+        .style.display = "none";
 
 
     document
         .getElementById("finalPage")
-        .style.display =
-        "block";
+        .style.display = "block";
 
 
-    /* ---------------------------------
-       KATEGORİ MESAJLARI
-    --------------------------------- */
+    /* =================================================
+       ERKEK FİNAL YAZILARI
+    ================================================= */
 
-    const finalTexts = {
+    const maleTexts = {
 
         "Çok Küçük":
-            "Çok Küçük kategorisine özel yazını buraya ekleyebilirsin.",
+            "Buraya Çok Küçük kategorisi için hazırlayacağımız özel metni yazabilirsin.",
 
         "Küçük":
-            "Küçük kategorisine özel yazını buraya ekleyebilirsin.",
+            "Buraya Küçük kategorisi için hazırlayacağımız özel metni yazabilirsin.",
 
         "Ortalama":
-            "Ortalama kategorisine özel yazını buraya ekleyebilirsin.",
+            "Buraya Ortalama kategorisi için hazırlayacağımız özel metni yazabilirsin.",
 
         "Büyük":
-            "Büyük kategorisine özel yazını buraya ekleyebilirsin.",
+            "Buraya Büyük kategorisi için hazırlayacağımız özel metni yazabilirsin.",
 
         "Mega":
-            "Mega kategorisine özel yazını buraya ekleyebilirsin."
+            "Buraya Mega kategorisi için hazırlayacağımız özel metni yazabilirsin."
 
     };
 
+
+    /* =================================================
+       KADIN FİNAL YAZILARI
+    ================================================= */
+
+    const femaleTexts = {
+
+        "Çok Küçük":
+            " Meme Boyun Ortalamın Çok Altında Küçük 😝 Ama Meme Boyutu Eşittir = Daha çok Zevk Değildir . Seks İkiye Ayrılır Birincisi Hal ve Haraketler Davranışlardır. Erkek Adayın Sana Duyduğu Saygı Ve Sevgi Sexsin Birinci kuralıdır Ama Tabikide Bu İşler Sadece Konuşma Ve Hal Haraketle Olmuyor . Görsellik Bu konuda Büyük Bir Rol Oynuyor Küçük Meme Yapısı Görsel Zevk Açısından Bir Eksidir . Her Kusur Kapatılabilir Daha Çok Ön Sevişme Daha Fazla Cilve . Onun Haricinde Memenin Dik Olması Sarkık Olmaması Seksi Daha Çok Alelendiren  Şeylerdir Memeni Sev Ve Tatlı Kız 💖.",
+
+        "Küçük":
+            "Buraya Küçük kategorisi için kadınlara özel hazırlayacağımız metni yazabilirsin.",
+
+        "Ortalama":
+            "Buraya Ortalama kategorisi için kadınlara özel hazırlayacağımız metni yazabilirsin.",
+
+        "Büyük":
+            "Buraya Büyük kategorisi için kadınlara özel hazırlayacağımız metni yazabilirsin.",
+
+        "Mega":
+            "Buraya Mega kategorisi için kadınlara özel hazırlayacağımız metni yazabilirsin."
+
+    };
+
+
+    let finalTexts;
+
+
+    if (selectedGender === "male") {
+
+        finalTexts =
+            maleTexts;
+
+    }
+
+    else {
+
+        finalTexts =
+            femaleTexts;
+
+    }
+
+
+    /* =================================================
+       BAŞLIK
+    ================================================= */
 
     document
         .getElementById("finalTitle")
         .textContent =
+
         selectedCategory +
         " Kategorisi ✨";
 
 
+    /* =================================================
+       METİN
+    ================================================= */
+
     document
         .getElementById("finalMessage")
         .textContent =
-        finalTexts[selectedCategory];
+
+        finalTexts[
+            selectedCategory
+        ];
 
 
-    /* ---------------------------------
+    /* =================================================
        RESİMLER
 
-       BURAYA KENDİ RESİMLERİNİ YAZ
-    --------------------------------- */
+       BURAYA KENDİ RESİMLERİNİ KOYABİLİRSİN.
 
-    const images = {
+       ÖRNEK:
 
-        "Çok Küçük":
-            "",
+       "Küçük": "images/kucuk.jpg"
 
-        "Küçük":
-            "",
+    ================================================= */
 
-        "Ortalama":
-            "",
+    const maleImages = {
 
-        "Büyük":
-            "",
+        "Çok Küçük": "",
 
-        "Mega":
-            ""
+        "Küçük": "",
+
+        "Ortalama": "",
+
+        "Büyük": "",
+
+        "Mega": ""
 
     };
+
+
+    const femaleImages = {
+
+        "Çok Küçük": "",
+
+        "Küçük": "",
+
+        "Ortalama": "",
+
+        "Büyük": "",
+
+        "Mega": ""
+
+    };
+
+
+    let images;
+
+
+    if (selectedGender === "male") {
+
+        images =
+            maleImages;
+
+    }
+
+    else {
+
+        images =
+            femaleImages;
+
+    }
 
 
     const image =
@@ -1513,6 +2014,10 @@ function showFinal() {
             .getElementById(
                 "finalImage"
             );
+
+
+    image.style.display =
+        "none";
 
 
     if (
@@ -1526,6 +2031,84 @@ function showFinal() {
             "block";
 
     }
+
+}
+
+
+/* =====================================================
+   CİNSİYET SEÇİMİNE GERİ DÖN
+===================================================== */
+
+function goBackToGender() {
+
+
+    document
+        .getElementById("maleCalculatorPage")
+        .style.display = "none";
+
+
+    document
+        .getElementById("femaleCalculatorPage")
+        .style.display = "none";
+
+
+    document
+        .getElementById("result")
+        .style.display = "none";
+
+
+    document
+        .getElementById("finalPage")
+        .style.display = "none";
+
+
+    document
+        .getElementById("genderPage")
+        .style.display = "block";
+
+
+    selectedGender = "";
+
+    selectedCategory = "";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =====================================================
+   BAŞTAN BAŞLA
+===================================================== */
+
+function restart() {
+
+    /* Formları temizle */
+
+    document
+        .getElementById("length")
+        .value = "";
+
+
+    document
+        .getElementById("girth")
+        .value = "";
+
+
+    document
+        .getElementById("underBust")
+        .value = "";
+
+
+    document
+        .getElementById("bust")
+        .value = "";
+
+
+    goBackToGender();
 
 }
 
